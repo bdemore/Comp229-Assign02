@@ -14,6 +14,7 @@
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="StyleSheet.css">
 </head>
 <body>
     <form runat="server">
@@ -54,6 +55,11 @@
                 </div>
             </div>
         </div>
+        <div>
+            <img src="Images/banner.png" style="width: 100%" height="230" />
+           <%-- IMAGE SOURCE: https://www.google.ca/search?q=banner+restaurant&source=lnms&tbm=isch&sa=X&ved=0ahUKEwizvMryjd3WAhXM5IMKHe4RDNgQ_AUICigB&biw=1280&bih=695#imgdii=sg2ug7f1ShrgYM:&imgrc=I9oH1wxHt26eJM:--%>
+        </div>
+
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>

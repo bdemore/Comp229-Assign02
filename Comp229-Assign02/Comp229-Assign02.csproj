@@ -171,6 +171,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="StyleSheet.css" />
     <Content Include="SurveyPage.aspx" />
     <Content Include="ThankYouPage.aspx" />
     <Content Include="ViewSwitcher.ascx" />
@@ -237,6 +238,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
