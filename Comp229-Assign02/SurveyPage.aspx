@@ -1,17 +1,21 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SurveyPage.aspx.cs" Inherits="Comp229_Assign02.SurveyPage" %>
+﻿<%@ Page Title="Survey" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SurveyPage.aspx.cs" Inherits="Comp229_Assign02.SurveyPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
- <div>
+    <div class="survey" />
         <h1>Fill and Win!</h1>
         <p>
-            Please select your gender<br />
-            <input type="radio" name="gender" value="male" checked> Male<br>
-            <input type="radio" name="gender" value="female"> Female<br>
-            <input type="radio" name="gender" value="other"> Other
+            <strong>Please select your gender</strong><br />
+            <asp:RadioButtonList ID="RadioButtonList1" runat="server">
+            <asp:ListItem>Male</asp:ListItem>
+            <asp:ListItem>Female</asp:ListItem>
+            <asp:ListItem>Other</asp:ListItem>
+            </asp:RadioButtonList>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
+            ControlToValidate="RadioButtonList1" ErrorMessage="Please Select a Gender" />
         </p>
         <p>
-            How many people were with you?
-            <select id="Select3" runat="server" multiple="true">
-                <option>Just me</option>
+            <strong>How many people were with you?</strong><br />
+            <select id="Select3" runat="server" multiple="true" required>
+                <option>Only me</option>
                 <option>1</option>
                 <option>2-3</option>
                 <option>4-5</option>
@@ -19,15 +23,15 @@
             </select>
         </p>
         <p>
-            What place in the restaurant do you like more?<br/>
-            <select id="serverModel" runat="server" multiple="true">
+            <strong>What place in the restaurant do you like more?</strong><br/>
+            <select id="serverModel" runat="server" multiple="true" required>
                 <option>Lounge</option>
                 <option>Bar</option>
                 <option>Patio</option>
             </select>
         </p>
         <p>
-            Did you order meals?
+            <strong>Did you order meals?</strong><br />
             <select id="Select1" runat="server">
                 <option></option>
                 <option>Yes</option>
@@ -35,7 +39,7 @@
             </select>
         </p>
         <p>
-            Did you order drinks?
+            <strong>Did you order drinks?</strong><br />
             <select id="Select2" runat="server">
                 <option></option>
                 <option>Yes</option>
@@ -43,7 +47,7 @@
             </select>
         </p>
         <p>
-            Are you planning to come back>
+            <strong>Are you planning to come back></strong><br />
             <select id="Select4" runat="server">
                 <option></option>
                 <option>Yes</option>
@@ -51,24 +55,27 @@
             </select>
         </p>
         <p>
-            How satisfied are you with your visit><br />
-            <input type="radio" name="survey" value="VerySat" checked> Very Satisfied<br />
-            <input type="radio" name="survey" value="Sats"> Satisfied<br />
-            <input type="radio" name="survey" value="Ok"> Ok<br />
-            <input type="radio" name="survey" value="Disap"> Disappointed<br />
-            <input type="radio" name="survey" value="VeryDisap"> Very Disappointed<br />
+            <strong>How satisfied are you with your visit?></strong><br />
+            <asp:RadioButtonList ID="RadioButtonList2" runat="server">
+            <asp:ListItem>Very Satisfied</asp:ListItem>
+            <asp:ListItem>Satisfied</asp:ListItem>
+            <asp:ListItem>Ok</asp:ListItem>
+            <asp:ListItem>Disappointed</asp:ListItem>
+            <asp:ListItem>Very Disappointed</asp:ListItem>
+            </asp:RadioButtonList>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server"
+            ControlToValidate="RadioButtonList2" ErrorMessage="Please Select an Option" />
         </p>
         <p>
-            Would you recommend Bruno's Chef Restaurant to a friends?
+            <strong>Would you recommend Bruno's Chef Restaurant to a friends?</strong><br />
             <select id="likeDotNet" runat="server">
                 <option></option>
                 <option>Yes</option>
                 <option>No</option>
             </select>
         </p>
-       
         <p>
-            Insert your email to receive the coupom<br />
+            <strong>Insert your email to receive the coupom</strong><br />
             <asp:TextBox ID="EmailTextBox" runat="server" TextMode="SingleLine" />
             <asp:RequiredFieldValidator ID="EmailTextBox_RequiredFieldValidator"
                 ControlToValidate="EmailTextBox" Display="Dynamic" runat="server" 
@@ -84,7 +91,6 @@
         <p>
             <asp:Label runat="server" ID="feedbackLabel"></asp:Label>
         </p>
-    </div>
-
+    <div />
 
 </asp:Content>

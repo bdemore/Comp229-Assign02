@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ThankYouPage.aspx.cs" Inherits="Comp229_Assign02.ThankYouPage" %>
+﻿<%@ Page Title="Thank You" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ThankYouPage.aspx.cs" Inherits="Comp229_Assign02.ThankYouPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
         THANK YOU!!<br /><br />
@@ -8,7 +8,7 @@
         <br />
         <br />
         <br />
-        You can also follow us in the social media:
+        You can also follow us in the Social Media:
     </h3>
     <div class="socialMedia">
         <a href="http://www.facebook.com">
